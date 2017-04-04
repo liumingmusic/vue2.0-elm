@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 头部信息 -->
-    <v-header></v-header>
+    <v-header :seller="seller"></v-header>
     <!-- tabs区域 -->
     <div class="tab border-1px">
       <div class="tab-item">
@@ -22,8 +22,24 @@
 <script>
 
 import topHeader from '@/components/header/header';
+//常量
+const ERROR_OK = 1;
 
 export default {
+  data() {
+    return {
+      seller: {}
+    }
+  },
+  created() {
+    var that = this;
+    that.$http.get("/api/seller").then(function(res){
+      var json = res.data;
+      if(json.code === ERROR_OK){
+        that.seller = json.data;
+      }
+    });
+  },
   components:{
     'v-header': topHeader
   }

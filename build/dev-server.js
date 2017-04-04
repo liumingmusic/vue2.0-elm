@@ -33,21 +33,21 @@ var apiRouter = express.Router();
 //制定接口
 apiRouter.get('/seller', function (req, res) {
   res.json({
-    error: 1, 
+    code: 1, 
     data: seller, 
     msg: '查询成功'
   });
 });
 apiRouter.get('/goods', function (req, res) {
   res.json({
-    error: 1, 
+    code: 1, 
     data: goods, 
     msg: '查询成功'
   });
 });
 apiRouter.get('/ratings', function (req, res) {
   res.json({
-    error: 1, 
+    code: 1, 
     data: ratings, 
     msg: '查询成功'
   });
