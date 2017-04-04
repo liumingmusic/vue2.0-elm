@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <!-- 头部信息 -->
     <v-header :seller="seller"></v-header>
     <!-- tabs区域 -->
