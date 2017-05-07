@@ -12,8 +12,7 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'index',
-      component: goods
+      redirect: '/goods' //默认直接跳转
     }, {
       path: '/goods',
       name: 'goods',
